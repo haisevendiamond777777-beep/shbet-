@@ -332,12 +332,12 @@
         .post-title { color: var(--sh-primary-dark); font-size: 16px; font-weight: bold; margin: 10px 0 5px; line-height: 1.4; }
         .post-desc { font-size: 14px; color: var(--muted); }
 
-        /* FOOTER */
+        /* FOOTER ĐÃ ĐƯỢC XÓA SẠCH LINK 404 */
         footer { background: #e5f2f6; padding: 20px 15px; margin-top: 30px; font-size: 14px; }
         footer h2 { font-size: 15px; text-transform: uppercase; margin-bottom: 10px; color: #111; }
         footer ul { list-style: none; }
-        footer ul li { margin-bottom: 8px; }
-        footer ul li a { text-decoration: none; color: var(--sh-primary-dark); }
+        footer ul li { margin-bottom: 8px; color: var(--sh-primary-dark); }
+        .footer-links-clean { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 10px; font-weight: 500; }
         .disclaimer { margin-top: 15px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
         .copyright { text-align: center; background: #004d61; color: #fff; font-size: 12px; padding: 10px 8px; }
 
@@ -590,15 +590,14 @@
     <footer>
         <div style="max-width:600px;margin:0 auto;">
             <h2>Về chúng tôi</h2>
-            <nav aria-label="Liên kết chân trang">
-                <ul>
-                    <li><a href="/ve-chung-toi/">Về chúng tôi</a></li>
-                    <li><a href="/dieu-khoan-su-dung/">Điều khoản sử dụng</a></li>
-                    <li><a href="/chinh-sach-bao-mat/">Chính sách bảo mật</a></li>
-                    <li><a href="/mien-tru-trach-nhiem/">Miễn trừ trách nhiệm</a></li>
-                    <li><a href="/lien-he/">Liên hệ</a></li>
-                </ul>
-            </nav>
+            <!-- Đã loại bỏ hoàn toàn các thẻ <a> dẫn tới link 404, thay bằng chữ thuần túy -->
+            <div class="footer-links-clean">
+                <span>Về chúng tôi</span> &bull; 
+                <span>Điều khoản sử dụng</span> &bull; 
+                <span>Chính sách bảo mật</span> &bull; 
+                <span>Miễn trừ trách nhiệm</span> &bull; 
+                <span>Liên hệ</span>
+            </div>
             <p class="disclaimer">
                 Trang web tổng hợp và phân phối thông tin giải trí trực tuyến có sử dụng liên kết tiếp thị (affiliate). Chỉ dành cho cá nhân từ 18 tuổi trở lên. Hãy tham gia có trách nhiệm và tuân thủ quy định pháp luật sở tại.
             </p>
